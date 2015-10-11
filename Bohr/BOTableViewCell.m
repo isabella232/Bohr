@@ -32,7 +32,9 @@
 		self.textLabel.highlightedTextColor = [UIColor whiteColor];
 		self.detailTextLabel.highlightedTextColor = [UIColor whiteColor];
 		self.key = key;
-		self.setting = [BOSetting settingWithKey:self.key];
+		if (self.key) {
+			self.setting = [BOSetting settingWithKey:self.key];
+		}
 	}
 	
 	return self;
